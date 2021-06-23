@@ -20,6 +20,10 @@
                                 <rect key="frame" x="0.0" y="34" width="414" height="862"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="4ev-qp-mSR">
+                                    <rect key="frame" x="0.0" y="209.00000034679067" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="160" id="cym-47-CB6" customClass="MovieCell">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="160"/>
@@ -65,6 +69,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="0C4-H9-9C7"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="4ev-qp-mSR" id="xsV-Bt-zZS"/>
                         <outlet property="tableView" destination="i5n-oy-7f4" id="bHW-yc-HV5"/>
                     </connections>
                 </viewController>
