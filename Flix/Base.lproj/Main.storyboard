@@ -21,13 +21,18 @@
                                 <rect key="frame" x="0.0" y="34" width="414" height="862"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="8dI-kp-Cto">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="4ev-qp-mSR">
-                                    <rect key="frame" x="0.0" y="209.00000034679067" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="841.6363639831543" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="160" id="cym-47-CB6" customClass="MovieCell">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="160"/>
+                                        <rect key="frame" x="0.0" y="68.5" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cym-47-CB6" id="mQW-X0-lZa">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
@@ -71,6 +76,7 @@
                     <navigationItem key="navigationItem" title="Movies" id="0C4-H9-9C7"/>
                     <connections>
                         <outlet property="activityIndicator" destination="4ev-qp-mSR" id="xsV-Bt-zZS"/>
+                        <outlet property="searchBar" destination="8dI-kp-Cto" id="pz9-jo-hKU"/>
                         <outlet property="tableView" destination="i5n-oy-7f4" id="bHW-yc-HV5"/>
                     </connections>
                 </viewController>
