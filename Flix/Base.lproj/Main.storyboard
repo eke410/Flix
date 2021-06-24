@@ -118,11 +118,16 @@
                                         <rect key="frame" x="0.0" y="-55" width="414" height="235"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.67441673540000002" green="0.7890444083" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOX-g0-2ht">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOX-g0-2ht">
                                         <rect key="frame" x="8" y="111" width="115" height="174"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.67441673539851765" green="0.78904440832991651" blue="0.96130555868148804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="9Vu-YU-Ov3" appends="YES" id="s3C-Fw-HLv"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXr-EJ-sag">
                                         <rect key="frame" x="131" y="219" width="275" height="35"/>
@@ -139,6 +144,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="76o-EA-jRY"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="wIz-UW-ll9"/>
                             </scrollView>
@@ -155,8 +161,41 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIB-9I-hwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9Vu-YU-Ov3">
+                    <connections>
+                        <segue destination="9dh-pI-IKa" kind="presentation" id="A9A-I5-dK1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="9" y="1397"/>
+            <point key="canvasLocation" x="867" y="1422"/>
+        </scene>
+        <!--Trailer View Controller-->
+        <scene sceneID="LVU-iD-TrS">
+            <objects>
+                <viewController id="9dh-pI-IKa" customClass="TrailerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roc-xx-wXz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg8-r3-oBi">
+                                <rect key="frame" x="42" y="178" width="329" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="12h-jT-Uys"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m4X-Tb-kDL"/>
+                    <connections>
+                        <outlet property="tempLabel" destination="wg8-r3-oBi" id="fVJ-pu-oJk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPZ-zY-y2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866.66666666666674" y="2138.8392857142858"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="Wwk-js-UA3">
@@ -250,7 +289,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Fqt-So-YLT"/>
+        <segue reference="3gV-df-oS7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
