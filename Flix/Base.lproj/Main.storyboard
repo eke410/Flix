@@ -114,20 +114,20 @@
                                 <rect key="frame" x="0.0" y="33" width="414" height="863"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QC7-al-7Me">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QC7-al-7Me">
                                         <rect key="frame" x="0.0" y="-55" width="414" height="235"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.67441673540000002" green="0.7890444083" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="rCt-EJ-Wjw" appends="YES" id="C7t-NW-BC3"/>
+                                        </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOX-g0-2ht">
                                         <rect key="frame" x="8" y="111" width="115" height="174"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.67441673539851765" green="0.78904440832991651" blue="0.96130555868148804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="9Vu-YU-Ov3" appends="YES" id="s3C-Fw-HLv"/>
-                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXr-EJ-sag">
                                         <rect key="frame" x="131" y="219" width="275" height="35"/>
@@ -161,9 +161,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIB-9I-hwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9Vu-YU-Ov3">
+                <tapGestureRecognizer id="rCt-EJ-Wjw">
                     <connections>
-                        <segue destination="9dh-pI-IKa" kind="presentation" id="A9A-I5-dK1"/>
+                        <segue destination="9dh-pI-IKa" kind="presentation" id="hD9-uI-ha5"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
