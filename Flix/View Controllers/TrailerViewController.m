@@ -6,10 +6,11 @@
 //
 
 #import "TrailerViewController.h"
+#import <WebKit/WebKit.h>
 
 @interface TrailerViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *tempLabel;
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
 
 @end
 
@@ -17,12 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tempLabel.text = self.movieID;
-    
+        
     [self fetchTrailer];
-    
-    
 }
 
 -(void) fetchTrailer {
@@ -35,7 +32,7 @@
                NSLog(@"%@", [error localizedDescription]);
 
                // creates network error alert
-               UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Cannot Get Movies" message:@"The Internet connection appears to be offline." preferredStyle:(UIAlertControllerStyleAlert)];
+               UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Cannot Get Trailer" message:@"The Internet connection appears to be offline." preferredStyle:(UIAlertControllerStyleAlert)];
 
                UIAlertAction *tryAgainAction = [UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                    [self fetchTrailer];
@@ -49,8 +46,11 @@
                NSArray *trailers = dataDictionary[@"results"];
 
                NSString *youtubeKey = trailers[1][@"key"];
-               NSString *youtubeLink = [@"https://www.youtube.com/watch?v=" stringByAppendingString:youtubeKey];
-               NSLog(youtubeLink);
+               NSString *youtubeURLString = [@"https://www.youtube.com/watch?v=" stringByAppendingString:youtubeKey];
+               
+               NSURL *youtubeURL = [NSURL URLWithString:youtubeURLString];
+               NSURLRequest *request = [NSURLRequest requestWithURL:youtubeURL cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
+               [self.webView loadRequest:request];
            }
        }];
     [task resume];
