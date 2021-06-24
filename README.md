@@ -21,7 +21,8 @@ The following **required** functionality is complete:
 The following **optional** features are implemented:
 
 * [ ] User can tap a poster in the collection view to see a detail screen of that movie
-User can search for a movie.
+* [ ] User can search for a movie.
+* [ ] User can view trailer by tapping poster in detail view. 
 All images fade in as they are loading.
 User can view the large movie poster by tapping on a cell.
 For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
