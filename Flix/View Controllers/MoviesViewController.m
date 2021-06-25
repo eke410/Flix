@@ -65,6 +65,7 @@
                self.movies = dataDictionary[@"results"];
                self.filteredMovies = self.movies;
                [self.tableView reloadData];
+               [self.activityIndicator stopAnimating];
            }
            [self.refreshControl endRefreshing];
        }];
@@ -126,7 +127,6 @@
         self.filteredMovies = self.movies;
     }
     [self.tableView reloadData];
-    [self.activityIndicator stopAnimating];
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
