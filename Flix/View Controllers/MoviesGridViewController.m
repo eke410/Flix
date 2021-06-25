@@ -7,7 +7,7 @@
 
 #import "MoviesGridViewController.h"
 #import "MovieCollectionCell.h"
-#import "DetailsViewController.h"
+#import "PosterViewController.h"
 #import "UIImageView+AFNetworking.h"
 
 @interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -101,8 +101,8 @@
      NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
      NSDictionary *movie = self.movies[indexPath.row];
      
-     DetailsViewController *detailsViewController = [segue destinationViewController];
-     detailsViewController.movie = movie;
+     PosterViewController *posterViewController = [segue destinationViewController];
+     posterViewController.movie = movie;
  }
 
 

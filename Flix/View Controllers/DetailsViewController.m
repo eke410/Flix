@@ -34,15 +34,10 @@
     [self.posterView setImageWithURL:posterURL];
     
     // loads backdropView - first loads low-resolution image, then followed by a high-resolution image
-    NSString *baseURLStringLowRes = @"https://image.tmdb.org/t/p/w500";
-    NSString *baseURLStringHighRes = @"https://image.tmdb.org/t/p/original";
     NSString *backdropURLString = self.movie[@"backdrop_path"];
-    
-    NSString *fullBackdropURLStringLowRes = [baseURLStringLowRes stringByAppendingString:backdropURLString];
-    NSString *fullBackdropURLStringHighRes = [baseURLStringHighRes stringByAppendingString:backdropURLString];
 
-    NSURL *backdropURLLowRes = [NSURL URLWithString:fullBackdropURLStringLowRes];
-    NSURL *backdropURLHighRes = [NSURL URLWithString:fullBackdropURLStringHighRes];
+    NSURL *backdropURLLowRes = [NSURL URLWithString:[@"https://image.tmdb.org/t/p/w500" stringByAppendingString:backdropURLString]];
+    NSURL *backdropURLHighRes = [NSURL URLWithString:[@"https://image.tmdb.org/t/p/original" stringByAppendingString:backdropURLString]];
 
     NSURLRequest *requestSmall = [NSURLRequest requestWithURL:backdropURLLowRes];
     NSURLRequest *requestLarge = [NSURLRequest requestWithURL:backdropURLHighRes];
