@@ -26,7 +26,7 @@ The following **optional** features are implemented:
 * [ ] Poster images fade in as they are loading in the Now Playing tab.
 User can view the large movie poster by tapping on a cell.
 * [ ] For the large backdrop poster, load the low resolution image first and then switch to the high resolution image when complete.
-* [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
+For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
 
 Customize the selection effect of the cell.
 Customize the navigation bar.
@@ -58,6 +58,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 - [TMDB](https://developers.themoviedb.org/3/getting-started) - movie database API
+- [poster placeholder image](https://shacknews-ugc.s3.us-east-2.amazonaws.com/user/9647/article-inline/2021-03/template.jpg?versionId=EPuOpjX7pGmrwxIxaF8BBrMfaK4X7f.S)
 
 ## License
 
