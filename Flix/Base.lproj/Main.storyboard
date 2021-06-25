@@ -75,7 +75,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Now Playing" id="0C4-H9-9C7"/>
+                    <navigationItem key="navigationItem" title="Now Playing" id="0C4-H9-9C7">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Icw-8K-LB3">
+                            <connections>
+                                <segue destination="T9F-0r-WEd" kind="show" id="84c-WZ-bHq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="4ev-qp-mSR" id="xsV-Bt-zZS"/>
                         <outlet property="searchBar" destination="8dI-kp-Cto" id="pz9-jo-hKU"/>
@@ -286,6 +292,41 @@
             </objects>
             <point key="canvasLocation" x="9" y="-3"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="eBw-A3-6Wg">
+            <objects>
+                <viewController id="T9F-0r-WEd" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JTE-q5-b4o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGN-la-SMe">
+                                <rect key="frame" x="80" y="160" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qn7-2a-0Le">
+                                <rect key="frame" x="268" y="155" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stateChanged:" destination="T9F-0r-WEd" eventType="valueChanged" id="KuD-aS-jVH"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dQA-jH-TVX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="rdh-hc-9fF"/>
+                    <connections>
+                        <outlet property="darkModeSwitch" destination="Qn7-2a-0Le" id="wz2-ps-KtZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9PX-aj-Wcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="692"/>
+        </scene>
         <!--Movie Posters-->
         <scene sceneID="SaH-dl-Mgg">
             <objects>
@@ -348,7 +389,13 @@
                         <viewLayoutGuide key="safeArea" id="el8-64-U00"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movie Posters" id="5TF-eV-z1Y"/>
+                    <navigationItem key="navigationItem" title="Movie Posters" id="5TF-eV-z1Y">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="O12-q6-K1C">
+                            <connections>
+                                <segue destination="T9F-0r-WEd" kind="show" id="9rQ-uQ-HM0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4v1-JR-uZR" id="NBU-sk-IwX"/>
                     </connections>
@@ -364,6 +411,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="84c-WZ-bHq"/>
         <segue reference="yah-s0-Orx"/>
     </inferredMetricsTieBreakers>
     <resources>

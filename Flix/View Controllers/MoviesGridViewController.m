@@ -97,12 +97,16 @@
      // Get the new view controller using [segue destinationViewController].
      // Pass the selected object to the new view controller.
      
-     UICollectionViewCell *tappedCell = sender;
-     NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
-     NSDictionary *movie = self.movies[indexPath.row];
-     
-     PosterViewController *posterViewController = [segue destinationViewController];
-     posterViewController.movie = movie;
+     // if table view cell clicked
+     if ([sender isKindOfClass: [UICollectionViewCell class]]) {
+         // pass info to movie details page
+         UICollectionViewCell *tappedCell = sender;
+         NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
+         NSDictionary *movie = self.movies[indexPath.row];
+         
+         PosterViewController *posterViewController = [segue destinationViewController];
+         posterViewController.movie = movie;
+     }
  }
 
 
