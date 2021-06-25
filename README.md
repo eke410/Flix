@@ -16,27 +16,22 @@ The following **required** functionality is complete:
 * [ ] User sees a loading state while waiting for the movies API.
 * [ ] User can pull to refresh the movie list.
 * [ ] User sees an error message when there's a networking error.
-* [ ] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
+* [ ] User can view a grid layout of posters by switching to Movie Posters tab.
 
 The following **optional** features are implemented:
 
-* [ ] User can tap a poster in the collection view to see a detail screen of that movie
-* [ ] User can search for a movie.
-* [ ] User can view trailer by tapping the backdrop in detail view. 
+* [ ] User can tap a cell in the Now Playing tab to see a detail screen of that movie.
+* [ ] User can search for a movie in the Now Playing tab.
+* [ ] User can view trailer by tapping the backdrop image in detail view. 
 * [ ] Poster images fade in as they are loading in the Now Playing tab.
-User can view the large movie poster by tapping on a cell.
-* [ ] For the large backdrop poster, load the low resolution image first and then switch to the high resolution image when complete.
-For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
-
-Customize the selection effect of the cell.
-Customize the navigation bar.
-Customize the UI.
-User can view the app on various device sizes and orientations.
+* [ ] User can view the large movie poster by tapping on a collection view cell.
+* [ ] For the backdrop image and large poster, load the low resolution image first and then switch to the high resolution image when complete.
+* [ ] Customize the UI.
 Run your app on a real device.
 
 The following **additional** features are implemented:
-
-None
+* [ ] Movie details also contain release date and star rating. 
+* [ ] User can click large poster to see movie details. 
 
 ## Video Walkthrough
 
@@ -58,6 +53,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 - [TMDB](https://developers.themoviedb.org/3/getting-started) - movie database API
+- [Cosmos](https://github.com/evgenyneu/Cosmos) - UI star rating control
 - [poster placeholder image](https://shacknews-ugc.s3.us-east-2.amazonaws.com/user/9647/article-inline/2021-03/template.jpg?versionId=EPuOpjX7pGmrwxIxaF8BBrMfaK4X7f.S)
 
 ## License
