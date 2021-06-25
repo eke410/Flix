@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
+        <!--Now Playing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </activityIndicatorView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="160" id="cym-47-CB6" customClass="MovieCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="160" id="cym-47-CB6" customClass="MovieCell">
                                         <rect key="frame" x="0.0" y="68.5" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cym-47-CB6" id="mQW-X0-lZa">
@@ -74,7 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="0C4-H9-9C7"/>
+                    <navigationItem key="navigationItem" title="Now Playing" id="0C4-H9-9C7"/>
                     <connections>
                         <outlet property="activityIndicator" destination="4ev-qp-mSR" id="xsV-Bt-zZS"/>
                         <outlet property="searchBar" destination="8dI-kp-Cto" id="pz9-jo-hKU"/>
@@ -204,7 +204,7 @@
         <scene sceneID="Wwk-js-UA3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="njl-m7-9bX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" id="L2a-Zf-6J0"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="L2a-Zf-6J0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yq8-kc-cWo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -219,11 +219,11 @@
             </objects>
             <point key="canvasLocation" x="9" y="-3"/>
         </scene>
-        <!--Grid View-->
+        <!--Movie Posters-->
         <scene sceneID="SaH-dl-Mgg">
             <objects>
                 <navigationController id="lIU-SL-Jga" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grid View" id="TUu-Ov-KnY"/>
+                    <tabBarItem key="tabBarItem" title="Movie Posters" image="square.grid.2x2.fill" catalog="system" id="TUu-Ov-KnY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="77Q-O6-iJ7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -236,7 +236,7 @@
             </objects>
             <point key="canvasLocation" x="1694" y="-3"/>
         </scene>
-        <!--Movies Grid View Controller-->
+        <!--Movie Posters-->
         <scene sceneID="mUc-gh-kBB">
             <objects>
                 <viewController id="bQ1-VH-OgF" customClass="MoviesGridViewController" sceneMemberID="viewController">
@@ -281,7 +281,7 @@
                         <viewLayoutGuide key="safeArea" id="el8-64-U00"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5TF-eV-z1Y"/>
+                    <navigationItem key="navigationItem" title="Movie Posters" id="5TF-eV-z1Y"/>
                     <connections>
                         <outlet property="collectionView" destination="4v1-JR-uZR" id="NBU-sk-IwX"/>
                     </connections>
@@ -292,10 +292,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3gV-df-oS7"/>
+        <segue reference="Fqt-So-YLT"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="poster_placeholder_image" width="450" height="248.5"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
