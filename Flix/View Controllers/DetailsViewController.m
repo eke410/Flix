@@ -8,6 +8,7 @@
 #import "DetailsViewController.h"
 #import "TrailerViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "Cosmos-Swift.h"
 
 @interface DetailsViewController ()
 
@@ -16,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
 @property (weak, nonatomic) IBOutlet UILabel *releaseDateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (weak, nonatomic) IBOutlet CosmosView *cosmosView;
 
 @end
 
@@ -80,10 +81,8 @@
     self.releaseDateLabel.text = self.movie[@"release_date"];
     
     NSString *ratingString = [NSString stringWithFormat:@"%@", self.movie[@"vote_average"]];
-    NSString *truncatedRatingString = [ratingString substringToIndex:MIN(3, [ratingString length])];
-    self.ratingLabel.text = [truncatedRatingString stringByAppendingString:@"/10"];
+    self.cosmosView.rating = ratingString.floatValue / 2;
     
-    [self.titleLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
 }
 
