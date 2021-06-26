@@ -29,6 +29,8 @@
 
 - (void)fetchFavorites {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@", [defaults arrayForKey:@"favoriteIDs"]);
+
     self.movieIDs = [defaults arrayForKey:@"favoriteIDs"];
     
     self.movies = [[NSArray alloc] init];
@@ -50,6 +52,7 @@
         }];
         [task resume];
     }
+    [self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -69,6 +72,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"Tab clicked");
     [self fetchFavorites];
 }
 
