@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
 @property (weak, nonatomic) IBOutlet UILabel *releaseDateLabel;
 @property (weak, nonatomic) IBOutlet CosmosView *cosmosView;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (weak, nonatomic) IBOutlet UIButton *unfavoriteButton;
 
 @end
 
@@ -78,7 +80,53 @@
     NSString *ratingString = [NSString stringWithFormat:@"%@", self.movie[@"vote_average"]];
     self.cosmosView.rating = ratingString.floatValue / 2;
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([[defaults arrayForKey:@"favoriteIDs"] containsObject:self.movie[@"id"]]) {
+        [self.favoriteButton setHidden:true];
+    } else {
+        [self.unfavoriteButton setHidden:true];
+    }
     [self.synopsisLabel sizeToFit];
+}
+
+- (void)favoriteButtonClicked:(UIButton *)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *favorites = [defaults arrayForKey:@"favoriteIDs"];
+    
+    if (![favorites containsObject:self.movie[@"id"]]) {
+        NSArray *updatedFavorites = [favorites arrayByAddingObject:self.movie[@"id"]];
+        [defaults setObject:updatedFavorites forKey:@"favoriteIDs"];
+        [defaults synchronize];
+        NSLog(@"Added favorite: %@", self.movie[@"id"]);
+    }
+//    NSLog(@"%@", [defaults arrayForKey:@"favoriteIDs"]);
+    [sender setHidden:true];
+    [self.unfavoriteButton setHidden:false];
+}
+
+- (void)unfavoriteButtonClicked:(UIButton *)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *favorites = [defaults arrayForKey:@"favoriteIDs"];
+    
+    if ([favorites containsObject:self.movie[@"id"]]) {
+        NSArray *updatedFavorites = [self removeString:self.movie[@"id"] fromArray:favorites];
+        [defaults setObject:updatedFavorites forKey:@"favoriteIDs"];
+        [defaults synchronize];
+        NSLog(@"Removed favorite: %@", self.movie[@"id"]);
+    }
+//    NSLog(@"%@", [defaults arrayForKey:@"favoriteIDs"]);
+    [sender setHidden:true];
+    [self.favoriteButton setHidden:false];
+}
+
+- (NSArray *)removeString:(NSString *)str fromArray:(NSArray *)arr {
+    NSArray *result = [[NSArray alloc] init];
+    for (NSString *s in arr) {
+        if (s != str) {
+            result = [result arrayByAddingObject:self.movie[@"id"]];
+        }
+    }
+    return result;
 }
 
 

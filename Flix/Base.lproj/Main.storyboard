@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="693"/>
+            <point key="canvasLocation" x="8.6956521739130448" y="692.41071428571422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GNy-lG-l08">
@@ -98,18 +98,19 @@
                     <connections>
                         <segue destination="njl-m7-9bX" kind="relationship" relationship="viewControllers" id="uoo-Yg-54o"/>
                         <segue destination="lIU-SL-Jga" kind="relationship" relationship="viewControllers" id="pQ1-tl-CjT"/>
+                        <segue destination="JFr-nt-UFt" kind="relationship" relationship="viewControllers" id="9Rh-jc-lPQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4j-uI-JFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="-733"/>
+            <point key="canvasLocation" x="867" y="-746"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="Jui-HG-whF">
             <objects>
                 <viewController id="mux-Fn-3Dv" customClass="DetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vzY-b4-6y6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9T7-8W-7d1">
@@ -171,6 +172,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDY-KK-8tM">
+                                        <rect key="frame" x="384" y="332" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="star" catalog="system"/>
+                                        <connections>
+                                            <action selector="favoriteButtonClicked:" destination="mux-Fn-3Dv" eventType="touchUpInside" id="KE5-JL-vtK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJZ-2x-WT4">
+                                        <rect key="frame" x="384" y="332" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="star.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="unfavoriteButtonClicked:" destination="mux-Fn-3Dv" eventType="touchUpInside" id="Lip-dp-0lV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="76o-EA-jRY"/>
@@ -184,10 +201,12 @@
                     <connections>
                         <outlet property="backdropView" destination="QC7-al-7Me" id="t5i-qO-Jz6"/>
                         <outlet property="cosmosView" destination="7yd-0U-FuD" id="1gJ-1w-joD"/>
+                        <outlet property="favoriteButton" destination="xDY-KK-8tM" id="7vR-LK-AGf"/>
                         <outlet property="posterView" destination="wOX-g0-2ht" id="dll-C3-QDO"/>
                         <outlet property="releaseDateLabel" destination="4E1-9p-3TV" id="v68-kF-fAk"/>
                         <outlet property="synopsisLabel" destination="H6I-tI-69v" id="A6U-Lv-jLS"/>
                         <outlet property="titleLabel" destination="UXr-EJ-sag" id="C9J-p2-93Y"/>
+                        <outlet property="unfavoriteButton" destination="pJZ-2x-WT4" id="NEf-RB-1aB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIB-9I-hwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -235,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2S-1i-KJv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692.753623188406" y="1370.7589285714284"/>
+            <point key="canvasLocation" x="867" y="1371"/>
         </scene>
         <!--Trailer View Controller-->
         <scene sceneID="LVU-iD-TrS">
@@ -301,7 +320,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69m-yW-LX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1694" y="-3"/>
+            <point key="canvasLocation" x="867" y="-3"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="BPI-lX-gQp">
+            <objects>
+                <navigationController id="JFr-nt-UFt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" id="sCa-hm-PQ1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yVl-Y2-aBX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KdM-Su-50X" kind="relationship" relationship="rootViewController" id="oJJ-Mg-uw8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ilj-LK-Fbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-3"/>
         </scene>
         <!--Movie Posters-->
         <scene sceneID="mUc-gh-kBB">
@@ -355,7 +391,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6p-JG-Fbi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692.753623188406" y="691.74107142857144"/>
+            <point key="canvasLocation" x="867" y="692"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="Gou-5m-XQN">
+            <objects>
+                <viewController id="KdM-Su-50X" customClass="FavoritesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CNn-n0-sP9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0lj-TP-HeT">
+                                <rect key="frame" x="0.0" y="35" width="414" height="861"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="160" id="nQT-ID-9MT" customClass="MovieCell">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nQT-ID-9MT" id="zHS-Nt-gxY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poster_placeholder_image" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-Bm-gvH">
+                                                    <rect key="frame" x="8" y="8" width="107" height="143"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lj4-Kt-RO9">
+                                                    <rect key="frame" x="123" y="33" width="271" height="121"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-Mj-sPy">
+                                                    <rect key="frame" x="123" y="11" width="271" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="posterView" destination="ohn-Bm-gvH" id="J21-iQ-pyM"/>
+                                            <outlet property="synopsisLabel" destination="lj4-Kt-RO9" id="3Rn-g0-oAO"/>
+                                            <outlet property="titleLabel" destination="GAG-Mj-sPy" id="BaJ-iT-m8G"/>
+                                            <segue destination="mux-Fn-3Dv" kind="show" id="Aor-hb-71j"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ko7-lr-TfQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="hbz-Gh-9fj"/>
+                    <connections>
+                        <outlet property="tableView" destination="0lj-TP-HeT" id="qiN-16-mip"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dn8-DA-CYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715.9420289855075" y="691.74107142857144"/>
         </scene>
     </scenes>
     <designables>
@@ -364,13 +464,15 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="yah-s0-Orx"/>
+        <segue reference="Fqt-So-YLT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.compact.up" catalog="system" width="128" height="43"/>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="poster_placeholder_image" width="450" height="248.5"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
