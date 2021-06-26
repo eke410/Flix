@@ -44,6 +44,9 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [ezgif](https://ezgif.com/video-to-gif).
 
+![](https://i.imgur.com/jCXx2ar.gif)
+
+
 ## Notes
 
 Describe any challenges encountered while building the app.
