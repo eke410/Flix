@@ -30,7 +30,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 * [ ] Movie details also contain release date and star rating. 
-* [ ] User can click large poster to see movie details. 
+* [ ] User can click arrow at bottom of large poster to see movie details. 
 
 ## Video Walkthrough
 
@@ -39,12 +39,12 @@ Here's a walkthrough of implemented user stories:
 ![](https://i.imgur.com/GUKiFNQ.gif)
 ![](https://i.imgur.com/RwMgjc7.gif)
 
-GIF created with [ezgif](https://ezgif.com/video-to-gif).
-
 Links to gifs if they don't load:
 - https://i.imgur.com/df2YddF.gif
 - https://i.imgur.com/GUKiFNQ.gif
 - https://i.imgur.com/RwMgjc7.gif
+
+GIF created with [ezgif](https://ezgif.com/video-to-gif).
 
 ## Notes
 
