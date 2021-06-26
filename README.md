@@ -35,8 +35,9 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-https://submissions.us-east-1.linodeobjects.com/ios_university_fast_track/o0pp6AK_.gif
-https://submissions.us-east-1.linodeobjects.com/ios_university_fast_track/PBJ8LQdz.gif
+![](https://i.imgur.com/df2YddF.gif)
+![](https://i.imgur.com/GUKiFNQ.gif)
+![](https://i.imgur.com/RwMgjc7.gif)
 
 GIF created with [ezgif](https://ezgif.com/video-to-gif).
 
