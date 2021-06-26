@@ -31,6 +31,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 * [ ] Movie details also contain release date and star rating. 
 * [ ] User can click arrow at bottom of large poster to see movie details. 
+* [ ] Added favorite/unfavorite feature and a favorites tab. (unfortunately doesn't last when app quits)
 
 ## Video Walkthrough
 
@@ -38,11 +39,14 @@ Here's a walkthrough of implemented user stories:
 ![](https://i.imgur.com/df2YddF.gif)
 ![](https://i.imgur.com/GUKiFNQ.gif)
 ![](https://i.imgur.com/RwMgjc7.gif)
+![](https://i.imgur.com/50mdxqY.gif)
 
 Links to gifs if they don't load:
 - https://i.imgur.com/df2YddF.gif
 - https://i.imgur.com/GUKiFNQ.gif
 - https://i.imgur.com/RwMgjc7.gif
+- https://i.imgur.com/50mdxqY.gif
+(the first three gifs were recorded before favorites feature was implemented so they don't include favorites tab)
 
 GIF created with [ezgif](https://ezgif.com/video-to-gif).
 
