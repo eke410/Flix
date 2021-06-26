@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
 @property (weak, nonatomic) IBOutlet UILabel *releaseDateLabel;
 @property (weak, nonatomic) IBOutlet CosmosView *cosmosView;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
@@ -81,6 +82,17 @@
     [self.synopsisLabel sizeToFit];
 }
 
+- (void)favoriteButtonClicked:(UIButton *)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *favorites = [defaults arrayForKey:@"favoriteIDs"];
+    
+    if (![favorites containsObject:self.movie[@"id"]]) {
+        NSArray *updatedFavorites = [favorites arrayByAddingObject:self.movie[@"id"]];
+        [defaults setObject:updatedFavorites forKey:@"favoriteIDs"];
+        [defaults synchronize];
+    }
+    NSLog(@"%@", [defaults arrayForKey:@"favoriteIDs"]);
+}
 
 #pragma mark - Navigation
 
