@@ -10,7 +10,7 @@
 		04208684268525020096E759 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04208683268525020096E759 /* TrailerViewController.m */; };
 		0420868626853BD20096E759 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0420868526853BD20096E759 /* WebKit.framework */; };
 		04954DE0268674CE00AD6202 /* PosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04954DDF268674CE00AD6202 /* PosterViewController.m */; };
-		04954DE62686927400AD6202 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04954DE52686927400AD6202 /* FavoritesViewController.m */; };
+		04B8ABBC2686B87D00DA8675 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8ABBB2686B87D00DA8675 /* FavoritesViewController.m */; };
 		04FCA7E126838E5000D2551C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCA7E026838E5000D2551C /* AppDelegate.m */; };
 		04FCA7E426838E5000D2551C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCA7E326838E5000D2551C /* SceneDelegate.m */; };
 		04FCA7EA26838E5000D2551C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FCA7E826838E5000D2551C /* Main.storyboard */; };
@@ -52,8 +52,8 @@
 		0420868526853BD20096E759 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04954DDE268674CE00AD6202 /* PosterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterViewController.h; sourceTree = "<group>"; };
 		04954DDF268674CE00AD6202 /* PosterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterViewController.m; sourceTree = "<group>"; };
-		04954DE42686927400AD6202 /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
-		04954DE52686927400AD6202 /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		04B8ABBA2686B87D00DA8675 /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		04B8ABBB2686B87D00DA8675 /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		04FCA7DC26838E5000D2551C /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FCA7DF26838E5000D2551C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04FCA7E026838E5000D2551C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 				04208683268525020096E759 /* TrailerViewController.m */,
 				04954DDE268674CE00AD6202 /* PosterViewController.h */,
 				04954DDF268674CE00AD6202 /* PosterViewController.m */,
-				04954DE42686927400AD6202 /* FavoritesViewController.h */,
-				04954DE52686927400AD6202 /* FavoritesViewController.m */,
+				04B8ABBA2686B87D00DA8675 /* FavoritesViewController.h */,
+				04B8ABBB2686B87D00DA8675 /* FavoritesViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 				04FCA7F226838E5100D2551C /* main.m in Sources */,
 				04FCA7E426838E5000D2551C /* SceneDelegate.m in Sources */,
 				04208684268525020096E759 /* TrailerViewController.m in Sources */,
-				04954DE62686927400AD6202 /* FavoritesViewController.m in Sources */,
+				04B8ABBC2686B87D00DA8675 /* FavoritesViewController.m in Sources */,
 				04FCA8222683F42F00D2551C /* MoviesGridViewController.m in Sources */,
 				04954DE0268674CE00AD6202 /* PosterViewController.m in Sources */,
 			);
