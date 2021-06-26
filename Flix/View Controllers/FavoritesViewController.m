@@ -69,7 +69,6 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    NSLog(@"Tab clicked");
     [self fetchFavorites];
 }
 

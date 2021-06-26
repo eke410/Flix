@@ -79,6 +79,10 @@
     NSString *ratingString = [NSString stringWithFormat:@"%@", self.movie[@"vote_average"]];
     self.cosmosView.rating = ratingString.floatValue / 2;
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([[defaults arrayForKey:@"favoriteIDs"] containsObject:self.movie[@"id"]]) {
+        [self.favoriteButton setHidden:true];
+    }
     [self.synopsisLabel sizeToFit];
 }
 
@@ -91,7 +95,8 @@
         [defaults setObject:updatedFavorites forKey:@"favoriteIDs"];
         [defaults synchronize];
     }
-    NSLog(@"%@", [defaults arrayForKey:@"favoriteIDs"]);
+//    NSLog(@"%@", [defaults arrayForKey:@"favoriteIDs"]);
+    [sender setHidden:true];
 }
 
 #pragma mark - Navigation
