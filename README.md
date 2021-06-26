@@ -4,7 +4,7 @@
 
 Submitted by: **Elizabeth Ke**
 
-Time spent: **3** hours spent in total
+Time spent: **15-20** hours spent in total
 
 ## User Stories
 
@@ -27,7 +27,6 @@ The following **optional** features are implemented:
 * [ ] User can view the large movie poster by tapping on a collection view cell.
 * [ ] For the backdrop image and large poster, load the low resolution image first and then switch to the high resolution image when complete.
 * [ ] Customize the UI.
-Run your app on a real device.
 
 The following **additional** features are implemented:
 * [ ] Movie details also contain release date and star rating. 
@@ -36,16 +35,17 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+https://submissions.us-east-1.linodeobjects.com/ios_university_fast_track/o0pp6AK_.gif
+https://submissions.us-east-1.linodeobjects.com/ios_university_fast_track/PBJ8LQdz.gif
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [Kap](https://getkap.co/).
+GIF created with [ezgif](https://ezgif.com/video-to-gif).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
 
-- 
+- Implementing stretch / additional stories with less guidance than the required stories. 
+- Using outside Swift code to get the visual star ratings.
 
 ## Credits
 
