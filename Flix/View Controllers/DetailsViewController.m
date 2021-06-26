@@ -123,7 +123,7 @@
     NSArray *result = [[NSArray alloc] init];
     for (NSString *s in arr) {
         if (s != str) {
-            result = [result arrayByAddingObject:self.movie[@"id"]];
+            result = [result arrayByAddingObject:s];
         }
     }
     return result;
